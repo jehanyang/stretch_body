@@ -649,6 +649,15 @@ class Robot(Device):
         #Let user know it is done
         self.pimu.trigger_beep()
         self.push_command()
+
+    def camera_along_arm_direction(self):
+        self.head.move_to('head_pan', -1.65)
+        self.head.move_to('head_tilt', -0.6)
+
+    def camera_along_base_direction(self):
+        self.head.move_to('head_pan', 0.0)
+        self.head.move_to('head_tilt', -0.6)
+
     # ################ Helpers #################################
 
     def _pull_status_head_dynamixel(self):
