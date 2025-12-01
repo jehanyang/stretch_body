@@ -658,6 +658,10 @@ class Robot(Device):
         self.head.move_to('head_pan', 0.0)
         self.head.move_to('head_tilt', -0.6)
 
+    def camera_alogn_base_back_direction(self):
+        self.head.move_to('head_pan', -3.14)
+        self.head.move_to('head_tilt', -0.6)
+
     # ################ Helpers #################################
 
     def _pull_status_head_dynamixel(self):
